@@ -6,7 +6,7 @@ namespace INSY4051_PROJECT_PHASE_II
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello!");
         }
     }
 }
