@@ -18,9 +18,16 @@ namespace INSY4051_PROJECT_PHASE_II
             string[] StoreC = new string[10] //Fills the Store's "stock" in the array.
             {"pasta", "pasta", "pasta", "marinara", "marinara", "potato", "potato", "tomato", "tomato", "tomato"};
 
-            Console.WriteLine("What store would you like me to check? (Pick 1-3): "); //Asks user to pick one of 3 stores available in the system.
+            Console.WriteLine("What store would you like me to check? (Pick 1 - 3): "); //Asks user to pick one of 3 stores available in the system.
             string userS = Console.ReadLine();
             int UserStore = Convert.ToInt32(userS); //Reads and converts the user's store choice to int.
+
+            while (UserStore < 1 || UserStore > 3) { //Verifies that the user is inputting a valid store number and if not, it asks the user for a valid store in a loop.
+
+                Console.WriteLine("Please enter a valid store number: ");
+                userS = Console.ReadLine();
+                UserStore = Convert.ToInt32(userS);
+            }
 
             Console.WriteLine("What are you looking for?:"); //Reads user's item choice and stores it in the userStock variable.
             string userStock = Console.ReadLine().ToLower();
@@ -76,3 +83,4 @@ namespace INSY4051_PROJECT_PHASE_II
         }
     }
 }
+
