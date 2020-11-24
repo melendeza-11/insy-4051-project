@@ -23,7 +23,7 @@ namespace INSY4051_PROJECT_PHASE_II
             int UserStore = Convert.ToInt32(userS); //Reads and converts the user's store choice to int.
 
             Console.WriteLine("What are you looking for?:"); //Reads user's item choice and stores it in the userStock variable.
-            string userStock = Console.ReadLine();
+            string userStock = Console.ReadLine().ToLower();
 
             if (UserStore == 1) //Checks which store the user chose to then select the appropriate array.
             {
