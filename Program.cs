@@ -69,6 +69,16 @@ namespace PHASE_II
             inventory1.Add(new Item("paprika", 10));
             inventory1.Add(new Item("oregano", 9));
             inventory1.Add(new Item("taco shells", 5));
+             inventory1.Add(new Item("oranges", 67));
+            inventory1.Add(new Item("cheez-it", 109));
+            inventory1.Add(new Item("green tea", 560));
+            inventory1.Add(new Item("jalapeños", 37));
+            inventory1.Add(new Item("gummy bears", 272));
+            inventory1.Add(new Item("chicken", 37));
+            inventory1.Add(new Item("broccoli", 40));
+            inventory1.Add(new Item("coca-cola", 1008));
+            inventory1.Add(new Item("peanut butter", 562));
+            inventory1.Add(new Item("cucumber", 24));
 
 
 
