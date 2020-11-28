@@ -69,7 +69,7 @@ namespace PHASE_II
             inventory1.Add(new Item("paprika", 10));
             inventory1.Add(new Item("oregano", 9));
             inventory1.Add(new Item("taco shells", 5));
-             inventory1.Add(new Item("oranges", 67));
+            inventory1.Add(new Item("oranges", 67));
             inventory1.Add(new Item("cheez-it", 109));
             inventory1.Add(new Item("green tea", 560));
             inventory1.Add(new Item("jalapeños", 37));
@@ -99,6 +99,15 @@ namespace PHASE_II
             inventory2.Add(new Item("canned tuna", 10));
             inventory2.Add(new Item("smoked salmon", 16));
             inventory2.Add(new Item("avacados", 11));
+            inventory2.Add(new Item("bagels", 230));
+            inventory2.Add(new Item("ranch", 70));
+            inventory2.Add(new Item("doritos", 815));
+            inventory2.Add(new Item("honey", 70));
+            inventory2.Add(new Item("coffee", 20));
+            inventory2.Add(new Item("pickels", 267));
+            inventory2.Add(new Item("bread", 2090));
+            inventory2.Add(new Item("flour", 380));
+            inventory2.Add(new Item("granola", 680));
 
 
 
