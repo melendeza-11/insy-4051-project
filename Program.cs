@@ -130,6 +130,15 @@ namespace PHASE_II
             inventory3.Add(new Item("turnip", 3));
             inventory3.Add(new Item("red snapper", 17));
             inventory3.Add(new Item("halibut", 4));
+            inventory3.Add(new Item("chocolate", 354));
+            inventory3.Add(new Item("raisins", 797));
+            inventory3.Add(new Item("cheerios", 1000));
+            inventory3.Add(new Item("crackers", 5780));
+            inventory3.Add(new Item("soup", 70));
+            inventory3.Add(new Item("cheddar cheese", 83));
+            inventory3.Add(new Item("barbecue sauce", 12));
+            inventory3.Add(new Item("tortillas", 780));
+            inventory3.Add(new Item("coffee creamer", 490));
 
 
 
