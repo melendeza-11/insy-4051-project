@@ -79,6 +79,16 @@ namespace PHASE_II
             inventory1.Add(new Item("paprika", 10));
             inventory1.Add(new Item("oregano", 9));
             inventory1.Add(new Item("taco shells", 5));
+            inventory1.Add(new Item("oranges", 67));
+            inventory1.Add(new Item("cheez-it", 109));
+            inventory1.Add(new Item("green tea", 560));
+            inventory1.Add(new Item("jalapeños", 37));
+            inventory1.Add(new Item("gummy bears", 272));
+            inventory1.Add(new Item("chicken", 37));
+            inventory1.Add(new Item("broccoli", 40));
+            inventory1.Add(new Item("coca-cola", 1008));
+            inventory1.Add(new Item("peanut butter", 562));
+            inventory1.Add(new Item("cucumber", 24));
             
 
             List<Item> inventory2 = new List<Item>(); //Creates a new list of object type 'Item'
@@ -104,7 +114,16 @@ namespace PHASE_II
             inventory2.Add(new Item("smelt", 8));
             inventory2.Add(new Item("canned tuna", 10));
             inventory2.Add(new Item("smoked salmon", 16));
-            inventory2.Add(new Item("avacados", 11));
+            inventory2.Add(new Item("avocados", 11));
+            inventory2.Add(new Item("bagels", 230));
+            inventory2.Add(new Item("ranch", 70));
+            inventory2.Add(new Item("doritos", 815));
+            inventory2.Add(new Item("honey", 70));
+            inventory2.Add(new Item("coffee", 20));
+            inventory2.Add(new Item("pickels", 267));
+            inventory2.Add(new Item("bread", 2090));
+            inventory2.Add(new Item("flour", 380));
+            inventory2.Add(new Item("granola", 680));
 
 
             List<Item> inventory3 = new List<Item>(); //Creates a new list of object type 'Item'
@@ -131,6 +150,15 @@ namespace PHASE_II
             inventory3.Add(new Item("turnip", 3));
             inventory3.Add(new Item("red snapper", 17));
             inventory3.Add(new Item("halibut", 4));
+            inventory3.Add(new Item("chocolate", 354));
+            inventory3.Add(new Item("raisins", 797));
+            inventory3.Add(new Item("cheerios", 1000));
+            inventory3.Add(new Item("crackers", 5780));
+            inventory3.Add(new Item("soup", 70));
+            inventory3.Add(new Item("cheddar cheese", 83));
+            inventory3.Add(new Item("barbecue sauce", 12));
+            inventory3.Add(new Item("tortillas", 780));
+            inventory3.Add(new Item("coffee creamer", 490));
 
             //Creates 3 new elements to the 'Store' list, adding the store name, address, phone number, store hours, and respective inventory.
             stores.Add(new Store("Store A", "Address: 1st & Greenfield, 1236 S Barcla, Milwaukee, WI, 53204", "Phone #: (414) 988- 9051", "Store Hours: 8am-9pm (Mon-Sun)", inventory1));
