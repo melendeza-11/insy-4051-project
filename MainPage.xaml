@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="finalattempt.MainPage">
+
+    <StackLayout>
+        <Label Text="Hi! I'm Cermy, your personal assistant! What can I help you with?" VerticalOptions="Start" HorizontalOptions="Center" />
+        <Label Text="You can ask about specific stores, addresses, hours, and inventory" VerticalOptions="Start" HorizontalOptions="CenterAndExpand"/>
+        <Entry x:Name="userInput" Placeholder="type here" HorizontalOptions="Start" VerticalOptions="End"/>
+        <Button Text="Enter" VerticalOptions="End" HorizontalOptions="End"
+                Clicked="Button_Clicked" />
+        <Label x:Name="cermyResponse" Text="I'll respond to you here" VerticalOptions="End" HorizontalOptions="CenterAndExpand" />
+    </StackLayout>
+
+</ContentPage>
