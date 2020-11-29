@@ -57,7 +57,66 @@ namespace finalattempt
     public partial class MainPage : ContentPage
     {
 
-        public static string readInput(string userInput)
+        public static int readInput(string userInput)
+        {
+
+            if (userInput.Contains("address") & userInput.Contains("store a"))
+            {
+                return 0;
+            }
+            else if (userInput.Contains("address") & userInput.Contains("store b"))
+            {
+                return 1;
+            }
+            else if (userInput.Contains("address") & userInput.Contains("store c"))
+            {
+                return 2;
+            }
+            else if (userInput.Contains("hours") & userInput.Contains("store a"))
+            {
+                return 3;
+            }
+            else if (userInput.Contains("hours") & userInput.Contains("store b"))
+            {
+                return 4;
+            }
+            else if (userInput.Contains("hours") & userInput.Contains("store c"))
+            {
+                return 5;
+            }
+            else if (userInput.Contains("phone") & userInput.Contains("store a"))
+            {
+                return 6;
+            }
+            else if (userInput.Contains("phone") & userInput.Contains("store b"))
+            {
+                return 7;
+            }
+            else if (userInput.Contains("phone") & userInput.Contains("store c"))
+            {
+                return 8;
+            }
+            else if (userInput.Contains("inventory"))
+            {
+                return 9;
+            }
+            else if (userInput.Contains("thank you"))
+            {
+                return 10;
+            }
+            else
+            {
+                return 999;
+            }
+        }
+
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+
         {
             List<Item> inventory1 = new List<Item>(); //Creates a new list of object type 'Item'
             inventory1.Add(new Item("milk", 5)); //Adds both item name and stock amount to an element of 'inventory1'
@@ -138,67 +197,62 @@ namespace finalattempt
             Store StoreA = new Store("Store A", "Address: 1st & Greenfield, 1236 S Barcla, Milwaukee, WI, 53204", "Phone #: (414) 988- 9051", "Store Hours: 8am-9pm (Mon-Sun)", inventory1);
             Store StoreB = new Store("Store B", "Address: 1541 Miller Park Way, West Milwaukee, WI, 54214", "Phone #: (414) 988- 9051", "Store Hours: 8am-9pm (Mon-Sun)", inventory2);
             Store StoreC = new Store("Store C", "Address: 6623 N. Damen Ave., Chicago, IL, 60645", "Phone #: (872) 888- 8835", "Store Hours: 7am-10pm (Mon-Sun)", inventory3);
+            
+            string userCommand = userInput.Text;
+            int command = readInput(userCommand);
 
-            if (userInput.Contains("address") & userInput.Contains("store a"))
+            if (command == 0)
             {
-                return String.Format("The store is located at {0}", StoreA.address);
+                cermyResponse.Text = String.Format("The store is located at {0}", StoreA.address);
             }
-            if (userInput.Contains("address") & userInput.Contains("store b"))
+            else if (command == 1)
             {
-                return String.Format("The store is located at {0}", StoreB.address);
+                cermyResponse.Text = String.Format("The store is located at {0}", StoreB.address);
             }
-            if (userInput.Contains("address") & userInput.Contains("store c"))
+            else if (command == 2)
             {
-                return String.Format("The store is located at {0}", StoreC.address);
+                cermyResponse.Text = String.Format("The store is located at {0}", StoreC.address);
             }
-            else if (userInput.Contains("hours") & userInput.Contains("store a"))
+            else if (command == 3)
             {
-                return String.Format("Store Hours: {0}", StoreA.hours);
+                cermyResponse.Text = String.Format("Store Hours: {0}", StoreA.hours);
             }
-            else if (userInput.Contains("hours") & userInput.Contains("store b"))
+            else if (command == 4)
             {
-                return String.Format("Store Hours: {0}", StoreB.hours);
+                cermyResponse.Text = String.Format("Store Hours: {0}", StoreB.hours);
             }
-            else if (userInput.Contains("hours") & userInput.Contains("store c"))
+            else if (command == 5)
             {
-                return String.Format("Store Hours: {0}", StoreC.hours);
+                cermyResponse.Text = String.Format("Store Hours: {0}", StoreC.hours);
             }
-            if (userInput.Contains("phone") & userInput.Contains("store a"))
+            else if (command == 6)
             {
-                return String.Format("The store phone number is: {0}", StoreA.phone);
+                cermyResponse.Text = String.Format("The store phone number is: {0}", StoreA.phone);
             }
-            if (userInput.Contains("phone") & userInput.Contains("store b"))
+            else if (command == 7)
             {
-                return String.Format("The store phone number is: {0}", StoreB.phone);
+                cermyResponse.Text = String.Format("The store phone number is: {0}", StoreB.phone);
             }
-            if (userInput.Contains("phone") & userInput.Contains("store c"))
+            else if (command == 8)
             {
-                return String.Format("The store phone number is: {0}", StoreC.phone);
+                cermyResponse.Text = String.Format("The store phone number is: {0}", StoreC.phone);
             }
-            else if (userInput.Contains("inventory"))
+            else if (command == 9)
             {
-                return "Our current stock consists of {0}";
+                cermyResponse.Text = String.Format("Our current stock consists of: {0}", StoreA.inventory);
             }
-            else if (userInput.Contains("thank you"))
+            else if (command == 10)
             {
-                return "I'm happy I could help!";
+                cermyResponse.Text = "I'm happy I could help!";
+            }
+            else if (command == 999)
+            {
+                cermyResponse.Text = "I'm sorry, I don't understand. Make sure you specify which store you want to know about.";
             }
             else
             {
-                return "I'm sorry, I don't understand";
+                cermyResponse.Text = "I'm not sure what happened, but it looks like something went wrong!";
             }
-        }
-
-        public MainPage()
-        {
-            InitializeComponent();
-        }
-
-        private void Button_Clicked(object sender, EventArgs e)
-
-        {
-            string userCommand = Convert.ToString(userInput.Text);
-            cermyResponse.Text = readInput(userCommand);
 
         }
     }
